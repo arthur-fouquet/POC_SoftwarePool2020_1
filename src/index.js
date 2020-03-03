@@ -57,6 +57,10 @@ function startServeur() {
       res.status = 400;
     }
   });
+  app.get('/repeat-my-param/:message', (req, res) => {
+    res.send(req.params.message);
+  });
   app.listen(PORT);
 }
+console.log('Ready...');
 startServeur();
